@@ -1,0 +1,47 @@
+# These icons are not part of the eggy project/program, they are only provided so you won't have crappy icons.
+# Hence the eggy should not receive credit for the icons located in this folder.
+# The icon set is, if memory serves me right, taken from http://www.kde-look.org/content/show.php/Dark-Glass+reviewed?content=67902
+# Eggy took the comment and uncomment icons from the Eric IDE
+# Here follows the original readme
+
+This icon set is a derivate of OS-K set and many replaced icons, directly produced from mentalrey (me). the target is to have many icons like "dark glass" and whith some photorealistic effect (not too much photorealistic). Normally I prefer to use icons in 96 pixel or 128, I hope you like it.
+
+99% of this set is GPL now and what's not is most likely creative commons (a tiny number of the mime types may be proprietary). PLEASE abide by the licence rules, if you use icons from this set please research and credit the appropriate people. I have been given permission to release other peoples art work under the GPL so respect the licence.
+
+Enjoy ")
+
+*Credits must go to:
+*Mentalrey for many glass icons.
+
+*Ademmer1977 for the kmail icon.
+*AleXander Kirichev for Slackware kmenu icon.
+*Amira Julia for the original art work that provided many printer and desktop icons.
+*Dirceu for the user avatars.
+*EKrava for the kmenu_Kubuntu icon.
+*Everaldo Coelho (realistiK & Crystal) - Ultra high quality open source icons.
+*Everaldo for the emotions.
+*Futurosoft for a couple of their GPL icons.
+*Guppetto (OS-L) - for (among other things) the best folder icons ever.
+*Gabriel Gabriel for kmenu icons.
+*hammergom for kde_fedora icon, K3B, XGame and many icons from his Crystal Glossy set.
+*Keyser Soze for the Debian kmenu.
+*Marco Martin (Glaze) - for the actions.
+*Marco Martin for the kwifi icons.
+*Marc Mironescu for the email icon.
+*Matias Costa for creating folder open and folder locked icons.
+*Riccardo Pavone for the best trash icon ever!
+*Rowancompsciguy for the laptop battery icons
+*Yaco for the Skype icon.
+
+
+
+
+----------------Installation-------------
+
+Just download the archive, uncompress and copy to /usr/share/icons then choose Dark-Glass icons from the KDE control center.
+
+If you want to customise your kmenu icon: Once uncompressed, enter 'apps' and 'actions' and remove the '_YOURDISTRO' from the icon of your choice (there are a few).
+
+Have fun.
+
+mentalrey

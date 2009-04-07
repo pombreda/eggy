@@ -1,0 +1,85 @@
+Eggy is an IDE created by Mark Florisson released under the terms of the GPL.
+
+Eggy's website is code.google.com/p/eggy. 
+
+<<<<<<<<<<<<<< HOW TO INSTALL EGGY >>>>>>>>>>>>>>>
+
+Eggy is currently only available for *nix. Eggy has the following dependencies:
+      - Python (2.4 or higher)
+      - Qt4 (4.3.*)
+      - PyQt4 (4.3.*)
+      - QScintilla v2
+
+
+<<<<<< GNU/Linux >>>>>>
+If you run GNU/Linux, these dependencies are probably available in your distro's
+package manager.
+
+      On Ubuntu (8.04) or Debian Lenny/Sid:
+             sudo apt-get install python-qscintilla2 python-qt4</>
+
+      On Gentoo:
+             sudo emerge -uvaD qscintilla-python PyQt4
+
+
+If you run a distro not listed, consult your package manager or build from source.
+
+
+<<<<<< Mac OSX >>>>>>
+If you run Mac OSX you will need to manually fetch and install these packages. 
+
+    1) Start with checking for python. Open your terminal emulator and type 
+    
+            type python
+
+    2) If it says "python is /usr/bin/python" (or "python is /my/path/to/python"), 
+       you should check if you have the correct version by issuing python -V from 
+       the command line (you need a version of 2.4 or higher). If you have a correct 
+       version you can go to step 4. If you don't you will need to fetch and 
+       reinstall python (step 3).
+
+    3) You can install python by fetching python-2.5.2-macosx.dmg from python.org and 
+       executing it. Now refresh your shell by typing "exec bash".
+
+    4) Installing PyQt requires you to have Xcode, "Apple's premiere development 
+       environment for Mac OS X", installed. According to the apple site this is 
+       packaged on your Mac OS X DVD. If you managed to break or lose your DVD, 
+       you can download it at http://developer.apple.com/tools/xcode.
+
+    5) It's now time to fetch and install qt-mac-opensource-4.3.4.dmg 
+       (or a newer version if it's available) from the Trolltech site 
+       (http://www.trolltech.com/). In the meantime, grab yourself a cup of coffee.
+
+    6) Create a new directory (e.g. mkdir pyqt) and download and save 
+       PyQt-mac-gpl-4.3.3.tar.gz and sip-4.7.4.tar.gz from 
+       http://www.riverbankcomputing.com to your newly created folder and type 
+            
+            cd pyqt 
+       
+       Now untar the files with the command: 
+       
+            for i in *.tar.gz; do tar -xzvf "$i"; done.
+
+    7) Finally type 
+            command='python configure.py && make && sudo make install'; 
+            cd sip-* && eval $command && cd ../PyQt-* && eval $command 
+
+       You are now done and ready to run eggy.
+
+
+<<<<<<<<<<<<<< RUNNING EGGY >>>>>>>>>>>>>>>
+
+Since you already managed to download and extract eggy, you are now ready to 
+run eggy:
+
+            ./eggy.py & disown
+
+If you would like to start eggy with the command "eggy", do 
+
+            echo "alias 'eggy'='/path/to/eggy.py & disown'" >> ~/.bashrc 
+            source ~/.bashrc
+
+(or whatever shell you use).
+
+
+Enjoy!

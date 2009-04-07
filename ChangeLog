@@ -1,0 +1,98 @@
+Eggy ChangeLog
+
+Version 0.1.1:
+	- fixed a bug of the Project Settings dialog raising an exception when
+		closing while having no projects created
+	- fixed a bug when there appeared lots of exceptions when using characters
+		outside the ascii range
+
+Version 0.1.2:
+	- prevented a segfault when refreshing the project tree when choosing an
+	already populated directory on the first start as a project dir
+	- prevented the user from typing characters outside the ascii range in the
+	editor
+	- use of a monospace font for the compile widget (this is better readable
+	when debugging)
+	- the enabling and disabling of some actions in the proper context (e.g.
+	"File -> Save")
+	- java, C++, D, CSharp, etc now have autocompletion for comments (/* and /**)
+	and for the switch statement
+	- disabled many popups when the user removed the project files
+	(.project.pk in a project directory)
+	- verification of file extensions on file creation
+	- removal of open files on package removal
+
+Version 0.2:
+	- added a plugin mechanism
+	- added a minimalistic shell
+	- added a system tray icon
+	- added a fullscreen option
+	- added a context menu for the editor
+	- added a find widget in the project tree for finding files
+	- added an update checker
+	- added an option for finding strings using a regex
+	- added icons
+	- added configurable eggy image in some toolbox widgets
+	- added a grep-like plugin
+	- added conversion of tabs of pasted text
+	- added a widget in the statusbar displaying line and character numbers
+
+	- changed the find widget
+	- show tooltips for buttons
+	- compile text browser now scrolls along with the output
+	- projects are now listed in alphabetical order
+	- disabled annoying popup when ommiting a project password
+	- show tooltips for buttons
+
+	- fixed misbehaviour of file save action disabling
+	- fixed a freeze when backgrounding eggy and running a program asking for
+	stdin. It's now save to background eggy
+	- fixed removing selected text when pasting on a single line
+	- not inserting some character when pressing C-s when the action is
+	disabled
+
+Version 0.2.1:
+	- fixed C style comment autocompletion
+	- fixed parameter passing when compiling/running
+	- added support for C
+	- added tab icons
+	- fixed fileSaveAll action enabling/disabling
+	- added a history to the shell
+	- tabs now change when scrolls over
+	- tabs of documents now show the filename as tooltip
+
+Version 0.3:
+	- created a list for showing classes, functions and imports, and the
+	ability to search for documentation via the web browser
+	- added support for unicode (finally)
+	- added support for tabs, tabs will no longer be automatically
+	converted for your "pleasure"
+	- added the option to visibly show whitespace
+	- fixed closing eggy on SIGTERM
+	- removed warning of universal newline support
+	- disable cut when it cannot be applied
+	- better C/C++ autocompletion
+	- adjusted ruby autocompletion to be less retarded
+	- adjusted some code to be more efficient (such as the find algoritm (
+	os.walk is no fun) and the compiler/interpreter/vm invocation)
+	- show full filename in the statusbar
+	- updated the grep plugin to select lines jumped to
+	- option to toggle show/hide widgets
+	- minor features which I have either forgotten to mention, or are not
+	worth mentioning
+
+Version 0.3.1:
+	- fixed ruby attribute listings in attribute list
+	- return key in projecttree opens selected file
+	- adjusted decoding of compiler output
+    - the ability to specify a (list of) filenames as arguments on startup,
+      that will be opened
+    - the possibility of specifying a (list of) filenames, while an eggy
+      instance is already running, and having them opened in that instance.
+      (this implies that only one eggy instance can run at a time)
+
+Version 0.3.2:
+    - xml support
+    - fixed eggy settings lineup
+    - automatically fill in project and package for a new file created from
+      the project tree
