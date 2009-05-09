@@ -158,7 +158,7 @@ class Model(MainWindow.MainWindow):
         self._restoreSettings()
         
         # the filter to set for showing files in the project tree
-        self.fileExtensions = [".java", ".py", ".pyw", ".sh", ".pl",
+        self.fileExtensions = [".java", ".py", ".pyw", ".pyx", ".sh", ".pl",
             ".vhdl", ".html", ".xml", ".css", ".rb", ".cpp", ".h", ".d", 
             ".inc", ".js", ".cs", ".c", ".sql", ".cgi", ".fcgi"]
 

@@ -264,7 +264,7 @@ class TextEdit(QsciScintilla):
         elif filename.endswith(".java") or language == "Java":
             lexer = QsciLexerJava()
         elif filename.endswith(".py") or filename.endswith(".pyw") \
-             or language == "Python":
+             or filename.endswith(".pyx") or language == "Python":
             lexer = QsciLexerPython()
             lexer.setColor(QColor(0xae8301), QsciLexerPython.Decorator) # brown
             lexer.setIndentationWarning(QsciLexerPython.Inconsistent)
