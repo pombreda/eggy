@@ -2624,7 +2624,8 @@ class Model(MainWindow.MainWindow):
         This method will be invoked from the network, when the network said
             goodbye to everyone, or directly, when the network isn't running
         """
-        raise SystemExit(0)
+        import __main__ as eggy
+        eggy.app.quit()
 
     
     def killed(self):
