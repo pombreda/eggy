@@ -98,8 +98,6 @@ Version 0.3.2:
       the project tree
 
 Version 0.3.3:
-    (nothing interesting from the user's point of view)
-    - fixed package layout
     - added setup.py
     - added the option of listing all files in the project tree instead of 
       just those with a certain file name extension
