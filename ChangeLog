@@ -96,3 +96,8 @@ Version 0.3.2:
     - fixed eggy settings lineup
     - automatically fill in project and package for a new file created from
       the project tree
+
+Version 0.3.3:
+    (nothing interesting from the user's point of view)
+    - fixed package layout
+    - added setup.py
