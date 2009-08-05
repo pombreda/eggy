@@ -73,13 +73,8 @@ class ProjectTree(QTreeView):
         except AttributeError:
             self._model = QDirModel()
             
-            filters = QStringList()
-            for filter in self._gui.fileExtensions:
-                filters.append("*" + filter)
-
-            self._model.setFilter(QDir.AllDirs|QDir.NoDotAndDotDot|QDir.AllEntries)
-            self._model.setNameFilters(filters)
-
+            self.setFilters()
+            
             if self._gui.projectCheckDir():
                 self.setModel(self._model)
                 self._index = QPersistentModelIndex(
@@ -88,6 +83,19 @@ class ProjectTree(QTreeView):
                 for x in xrange(1, 4): 
                     self.hideColumn(x)
     
+    def setFilters(self):
+        """
+        set the name filters (hide files not having one of the listed 
+        extensions)
+        """
+        self._model.setFilter(QDir.AllDirs|QDir.NoDotAndDotDot|QDir.AllEntries)
+        
+        if self._gui.showAllFiles:
+            self._model.setNameFilters([])
+        else:
+            filters = ['*' + ext for ext in self._gui.fileExtensions]
+            self._model.setNameFilters(filters)
+            
     @debug
     def projectRemoveFile(self, filename=None, msg=None):
         """

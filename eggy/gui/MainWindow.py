@@ -1658,7 +1658,7 @@ class MainWindow(QMainWindow):
             self._settingsTabs = TabWidget()
             layout = QVBoxLayout()
             layout.addWidget(self._settingsTabs)
-            layout.addLayout(self._okCancelButtons(self._applySettings, \
+            layout.addLayout(self._okCancelButtons(self._applySettings,
                 self._settingsDlg))
             
             # editor
@@ -1692,6 +1692,9 @@ class MainWindow(QMainWindow):
             self._settingsIndentationGuides = QCheckBox()
             self._settingsIndentationGuides.setChecked(self.indentationGuides)
             
+            self._settingsShowAllFiles = QCheckBox()
+            self._settingsShowAllFiles.setChecked(self.showAllFiles)
+            
             self._settingsShowEggyImage = QCheckBox()
             self._settingsShowEggyImage.setChecked(self.stylesheet)
             
@@ -1707,6 +1710,7 @@ class MainWindow(QMainWindow):
                 "Auto Complete Words",
                 "Auto complete words after ... chars",
                 "Indentation Guides",
+                "List files of any extension",
                 "Show eggy image",
             ]
             labels = map(QLabel, labels)
@@ -1720,6 +1724,7 @@ class MainWindow(QMainWindow):
                 self._settingsAutoCompleteWords,
                 self._settingsAutoCompleteInvocation,
                 self._settingsIndentationGuides,
+                self._settingsShowAllFiles,
                 self._settingsShowEggyImage,
             )
             

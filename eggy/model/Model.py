@@ -2254,8 +2254,11 @@ class Model(MainWindow.MainWindow):
         self.autoCompleteWords = self._settingsAutoCompleteWords.isChecked()
         self.autoCompleteInvocationAmount = \
             self._settingsAutoCompleteInvocation.value()
+        self.showAllFiles = self._settingsShowAllFiles.isChecked()
         self.stylesheet = self._settingsShowEggyImage.isChecked()
         self.setStylesheet()
+        
+        self.projectTree.setFilters()
         
         for editor, b in self._editors.itervalues():
             editor.setAttrs()
@@ -2511,6 +2514,8 @@ class Model(MainWindow.MainWindow):
             QVariant(self.autoCompleteInvocationAmount))
             
         settings.setValue("ProjectTree/Image", QVariant(self.stylesheet))    
+        settings.setValue("ProjectTree/ShowAllFiles", 
+                          QVariant(self.showAllFiles))
         
         settings.setValue("Network/Port", QVariant(self._port))
         
@@ -2570,6 +2575,9 @@ class Model(MainWindow.MainWindow):
         self.autoCompleteInvocationAmount = settings.value(
             "Editor/AutoComleteInvocationAmount", QVariant(3)
         ).toInt()[0]
+        
+        self.showAllFiles = settings.value("ProjectTree/ShowAllFiles",
+                                           QVariant(False)).toBool()
         
         self.stylesheet = settings.value("ProjectTree/Image", 
             QVariant(True)).toBool()
