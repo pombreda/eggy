@@ -70,16 +70,19 @@ If you run Mac OSX you will need to manually fetch and install these packages.
 <<<<<<<<<<<<<< RUNNING EGGY >>>>>>>>>>>>>>>
 
 Since you already managed to download and extract eggy, you are now ready to 
-run eggy:
+either run or install eggy:
 
-            ./eggy.py & disown
+To run it do 
+    
+    ./eggy.sh
 
-If you would like to start eggy with the command "eggy", do 
+To install it type
 
-            echo "alias 'eggy'='/path/to/eggy.py & disown'" >> ~/.bashrc 
-            source ~/.bashrc
+    sudo python setup.py install
 
-(or whatever shell you use).
+and then run it by typing
+    
+    eggy
 
 
 Enjoy!
