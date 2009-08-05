@@ -25,7 +25,7 @@ order.
 
 import time
 
-from decorators import Decorators
+from eggy.decorators import Decorators
 
 __all__ = ['Timer']
 

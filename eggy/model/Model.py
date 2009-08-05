@@ -44,16 +44,13 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from PyQt4 import Qsci
 
-from gui import MainWindow
-from gui import EditorTabWidget
-from gui import TextEdit
-
-from network.Network import Network, PortTakenException
-from compile.Compile import Compile
-import compile.Compile as Compile_
-from decorators import Decorators
-from project import Project
-from project import Find
+from eggy.gui import MainWindow, EditorTabWidget, TextEdit
+from eggy.network.Network import Network, PortTakenException
+from eggy.compile.Compile import Compile
+import eggy.compile.Compile as Compile_
+from eggy.decorators import Decorators
+from eggy.project import Project
+from eggy.project import Find
 
 class NoSuchFileException(Exception): 
     """
@@ -2314,7 +2311,7 @@ class Model(MainWindow.MainWindow):
             if name not in self._plugins:
                 try:
                     # __import__ in 2.4 does not accept keyword arguments
-                    plugin = __import__("%s.%s" % ("plugins", name), {}, {},
+                    plugin = __import__("%s.%s" % ("eggy.plugins", name), {}, {},
                                         ['']) # import rightmost
 
                     # check for validity

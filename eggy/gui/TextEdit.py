@@ -29,7 +29,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from PyQt4.Qsci import *
 
-from decorators import Decorators
+from eggy.decorators import Decorators
 
 class TextEdit(QsciScintilla):
     

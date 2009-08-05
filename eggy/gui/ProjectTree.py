@@ -25,7 +25,7 @@ import os
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from decorators import Decorators
+from eggy.decorators import Decorators
 import MainWindow
 
 __all__ = ['ProjectTree']

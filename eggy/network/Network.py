@@ -33,8 +33,8 @@ import operator
 
 from PyQt4.QtCore import *
 
-from Timer import Timer
-from decorators import Decorators
+from eggy.network.Timer import Timer
+from eggy.decorators import Decorators
 
 __all__ = ['Network']
 

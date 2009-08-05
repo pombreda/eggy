@@ -27,9 +27,9 @@ import random
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from decorators import Decorators
-from network import Network
-from network import Timer
+from eggy.decorators import Decorators
+from eggy.network import Network
+from eggy.network import Timer
 
 __all__ = ['Project']
 

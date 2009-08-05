@@ -1,3 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
-exec -a eggy python ./eggy.py
+export PYTHONPATH="$PYTHONPATH:$PWD" 
+exec -a eggy python bin/eggy

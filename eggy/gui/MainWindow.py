@@ -31,10 +31,10 @@ import itertools
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from compile import Compile
-from network.Network import Network
-from decorators import Decorators
-from shell import Shell
+from eggy.compile import Compile
+from eggy.network.Network import Network
+from eggy.decorators import Decorators
+from eggy.shell import Shell
 
 from TabWidget import TabWidget
 import ProjectTree

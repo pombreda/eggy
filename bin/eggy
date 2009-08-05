@@ -16,14 +16,15 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-__version__ = '0.3.2'
-
 import os
 import sys
 import errno
 import signal
 import socket
 import atexit
+
+import eggy
+from eggy import __version__, email, appname, website
 
 signal.signal(signal.SIGUSR1, signal.SIG_IGN)
 
@@ -73,12 +74,8 @@ else:
     else:
         alreadyRunning(pid)
 
-website = "http://eggy.student.utwente.nl"
-email = "eggy.nospam@gmail.com"
-appname = "eggy"
-
 # base = sys.path[0] + os.sep
-base = os.path.dirname(os.path.abspath(__file__)) + os.sep
+base = os.path.dirname(os.path.abspath(eggy.__file__)) + os.sep
 
 # sys.path.append(base + "plugins")
 
@@ -99,7 +96,7 @@ if message is not None:
     sys.stderr.write("be found on %s or in the README.\n" % website)
     raise SystemExit(1)
 
-from model.Model import Model
+from eggy.model.Model import Model
 
 app = QtGui.QApplication(sys.argv)
 app.setApplicationName(appname)
