@@ -1959,7 +1959,7 @@ class MainWindow(QMainWindow):
         browser = QTextBrowser()
         browser.setOpenLinks(False)
         
-        link = 'http://localhost:8000/eggy/default/xmlrpc/xmlrpc'
+        link = 'http://eggyyyy.appspot.com/eggy/default/xmlrpc/xmlrpc'
         try:
             server = xmlrpclib.ServerProxy(link)
             info = server.info()
