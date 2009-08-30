@@ -1,11 +1,8 @@
-import glob
 from distutils.core import setup
 
 from eggy import __version__, email, website
 
 def main():
-    #data_files = [('eggy/img', glob.glob('eggy/img/*'))]
-    #print data_files
     setup(
         name='eggy',
         version=__version__,

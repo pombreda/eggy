@@ -25,8 +25,10 @@ __all__ = ['MainWindow']
 import os
 import sys
 import user
+import socket
 import urllib2
 import itertools
+import xmlrpclib
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
@@ -1957,28 +1959,18 @@ class MainWindow(QMainWindow):
         browser = QTextBrowser()
         browser.setOpenLinks(False)
         
-        version = ""
-        link = self._website + "/node/2"
-        text = "<b>Latest version: </b>"
-        success = False
-        
+        link = 'http://localhost:8000/eggy/default/xmlrpc/xmlrpc'
         try:
-            f = urllib2.urlopen(self._website + "/version")
-            line = f.readline()
-            
-            version = line.split(" ")[0]
-            link = line[len(version):]
-            text += " ".join((version, "<br />"*2))
-            
-            if version > self.version:
-                text += "A newer version is available for %s<br />" % link
-            success = True
-            text += f.read()
-        except:
-            pass
-        
-        if not success:
-            text += "Unable to determine"
+            server = xmlrpclib.ServerProxy(link)
+            info = server.info()
+        except socket.error, e:
+            text = 'Problem contacting the server: %s' % (e,)
+        else:
+            if (map(int, info['version'].split('.')) > 
+                map(int, self.version.split('.'))):
+                text = "A newer version is available: %s" % (info['changes'],)
+            else:
+                text = "You are running the latest version."
         
         browser.setHtml(
         """

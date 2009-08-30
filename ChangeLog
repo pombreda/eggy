@@ -101,3 +101,6 @@ Version 0.3.3:
     - added setup.py
     - added the option of listing all files in the project tree instead of 
       just those with a certain file name extension
+
+Version 0.3.4:
+    - added xmlrpc support for retrieving information about the latest version
