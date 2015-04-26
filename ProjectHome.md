@@ -1,0 +1,3 @@
+Eggy is an IDE/editor for UNIX. Eggy has syntax highlighting, template features, options for compiling and running your code, auto completion/indentation and lots more. Eggy also supports group projects in which you can see live changes being made by others.
+
+Eggy currently supports the following languages: Python, Java, C/C++, D, Perl, Ruby, VHDL, shell scripting, web development (HTML, JavaScript, XML, CSS) and SQL.
